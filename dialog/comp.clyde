@@ -1,0 +1,97 @@
+H: "16/09/92 (14:53)"
+R: "Okay... Oi. Meu nome é Raphael Santos. Eu tenho 25 anos e trabalho como detetive na cidade de Piratininga ha mais ou menos 4 meses. Nas últimas semanas, eu e meu mentor, detetive Carlos Almeida, temos investigado casos de desaparecimentos suspeitos na cidade... e acho que ele acabou de se tornar uma das vítimas."
+R: "Ontem recebi uma mensagem de voz dele. Nunca o vira daquela maneira: confuso, ansioso, com medo. Ele disse coisas que nao sei se compreendo completamente, mas preciso tentar. Comecei essa série de entradas para deixar minhas descobertas registradas e ver se consigo decifrar o que está por trás de tudo isso."
+D: "No momento, acho que tenho duas escolhas:"
+*= Investigar por conta própria
+	-> i0
+*= Entregar áudio para polícia
+	-> i1
+	
+== i0
+H: "18/09/92 (21:34)"
+R: "Achei algumas coisas interessantes no escritório do mentor. Ele definitivamente era fa de comida japonesa, baseado na quantidade de embalagens com comida apodrecendo que encontrei jogadas pelo chao. Nao foi muito difícil acessar os arquivos em seu computador (impressionante como a senha é sempre algo relacionado com animais de estimacao)."
+R: "Na área de trabalho, dois arquivos de texto chamaram minha atencao: 'forno.txt' e 'vitimas.txt'."
+D: "Decidi comecar pelo:"
+*= forno.txt
+	-> forno0
+*= vitimas.txt
+	-> vitimas0
+	
+== i1
+H: "19/09/92 (17:42)"
+R: "Acho que estraguei tudo. Mostrei a mensagem para a polícia e eles decidiram colocar todos os documentos do escritório do mentor como confidenciais. Eles sao os únicos que podem acessá-los agora. Me sinto completamente... impotente."
+*= Continuar
+	-> e546
+
+== forno0
+A: "1"
+T: "-22.417832"
+T: "-49.119737"
+R: "Hm... coordenadas. Bem que ele me avisou sobre 'abrir o forno' em sua mensagem..."
+R: "Por que isso está parecendo um filme em que o protagonista vai direto para uma armadilha..."
+R: "Enfim, acho que nao tenho escolha dessa vez."
+*= Continuar
+	-> forno1
+
+== forno1
+R: "Agora para o próximo arquivo... "
+R: "Ah?"
+R: "Corrompido?"
+D: "'Um bom detetive trabalha com o que tem'. Odeio como ele era brega ao usar essas frases de efeito."
+cave: "1"
+-> END
+
+== vitimas0
+A: "1"
+T: "Oh, Brutus..."
+T: " "
+T: "Mvob Sjdjfsj Nbsdij" 
+T: "Dbnjmb Dsjtujob Tjmwb"
+T: "Csvop Sbnbmip Obtdjnfoup"
+T: "Sfobo Qjofeb Mfbm"
+T: "Mvjt Hbcsjfm Ebnjbuuj"
+T: "Hvmifsnf Npsbjt Bsbvkp"
+T: "Kvmjb Dbseptp G."
+T: " "
+T: "Jojdjbm ebt 7 qsjnfjsbt wjujnbt"
+T: "(14) 943-2788"
+D: "Acho que isso está criptografado... Penso que só deveria ligar para esse número quando entender o que está escrito."
+*= Continuar
+	-> vitimas1
+	
+== vitimas1
+R: "Agora para o próximo arquivo... "
+R: "Ah?"
+R: "Corrompido?"
+D: "'Um bom detetive trabalha com o que tem'. Odeio como ele era brega ao usar essas frases de efeito."
+-> lig1
+
+== lig1
+R: "[essa parte ainda nao foi feita]"
+
+== e546
+F: "546"
+R: "Todos os documentos foram confiscados e você perdeu a chance de investigar o caso. Você perdeu o emprego, já que, sem um mentor, você nao consegue trabalhar."
+D: "O detetive continua desaparecido."
+E: " "
+
+== e873
+F: "873"
+R: "Você chega a conclusao de que seu mentor estava completamente fora de si e decide parar de se afundar na loucura deixada por ele. Você tranca o escritório e vai embora."
+D: "O detetive continua desaparecido."
+E: " "
+
+== e972
+F: "972"
+R: "Você conseguiu um mandado de busca para a casa do sujeito. Nada de suspeito ou incriminador foi encontrado. Você perdeu a credibilidade."
+D: "O detetive continua desaparecido."
+E: " "
+
+== e667
+F: "667"
+R: "Você se entrega a #######. Toda sanidade restante em você se perde e vai para longe juntamente com as palavras sussurradas. Você entra na lista de desaparecidos, mas ele te encontrou."
+W: " "
+E: " "
+
+
+

@@ -1,0 +1,281 @@
+[gd_scene load_steps=21 format=3 uid="uid://ccas8g86hdg6u"]
+
+[ext_resource type="FontFile" uid="uid://cjhr5pqg0wvkh" path="res://font/Web437_Acer_VGA_8x8.woff" id="1_gcbbq"]
+[ext_resource type="Shader" uid="uid://obfgl2k7c4tq" path="res://shaders/crt.gdshader" id="1_gxl5a"]
+[ext_resource type="Script" uid="uid://dlmephpfgopu6" path="res://control.gd" id="1_jr5mb"]
+[ext_resource type="Script" uid="uid://c26i32e7l44kw" path="res://rich_text_label.gd" id="3_4xfga"]
+[ext_resource type="Shader" uid="uid://b3qrbkvyfryv4" path="res://shaders/crt_other.gdshader" id="3_gcbbq"]
+[ext_resource type="Texture2D" uid="uid://bmj056aydw7xe" path="res://imgs/eye.png" id="4_meoe4"]
+[ext_resource type="AudioStream" uid="uid://c7skyuxtt4egh" path="res://sound/keyboard/kt0.wav" id="6_7rrbn"]
+[ext_resource type="AudioStream" uid="uid://dfm6ocp7drxca" path="res://sound/keyboard/kt1.wav" id="8_pmph0"]
+[ext_resource type="AudioStream" uid="uid://uvv4icbrcfnc" path="res://sound/keyboard/kt2.wav" id="9_tupdg"]
+[ext_resource type="AudioStream" uid="uid://cf1co6enl62w1" path="res://sound/keyboard/kt3.wav" id="10_nbtx1"]
+[ext_resource type="AudioStream" uid="uid://bpub7jukrclik" path="res://sound/keyboard/kt4.wav" id="11_bb54q"]
+[ext_resource type="AudioStream" uid="uid://7mvs21omvqle" path="res://sound/keyboard/kt5.wav" id="12_kbuuy"]
+[ext_resource type="Script" uid="uid://dkfxs3d33otqk" path="res://text_edit.gd" id="13_7rrbn"]
+[ext_resource type="AudioStream" uid="uid://c35id2a2qqkni" path="res://sound/keyboard/kt6.wav" id="13_saiw2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_18hgq"]
+shader = ExtResource("1_gxl5a")
+shader_parameter/crt_curve = 0.0
+shader_parameter/crt_scan_line_color = 0.347
+shader_parameter/aperture_grille_rate = 0.4
+shader_parameter/rf_switch_esque_blur = 0.45
+shader_parameter/white_noise_rate = 0.1
+shader_parameter/brightness = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jr5mb"]
+shader = ExtResource("3_gcbbq")
+shader_parameter/crt_curve = 0.02
+shader_parameter/crt_scan_line_color = 0.347
+shader_parameter/aperture_grille_rate = 0.4
+shader_parameter/rf_switch_esque_blur = 0.45
+shader_parameter/white_noise_rate = 0.1
+shader_parameter/brightness = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a1vod"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rrbn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_meoe4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pmph0"]
+shader = ExtResource("1_gxl5a")
+shader_parameter/crt_curve = 0.0
+shader_parameter/crt_scan_line_color = 0.347
+shader_parameter/aperture_grille_rate = 0.4
+shader_parameter/rf_switch_esque_blur = 0.45
+shader_parameter/white_noise_rate = 0.1
+shader_parameter/brightness = 0.5
+
+[node name="Computer" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 177.0
+offset_top = 17.0
+offset_right = -174.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jr5mb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hour" type="RichTextLabel" parent="CanvasLayer/Control"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.0
+offset_right = 375.0
+offset_bottom = 601.0
+grow_horizontal = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gcbbq")
+theme_override_font_sizes/normal_font_size = 19
+text = "16/09/92 (14:53)
+
+Okay... Oi, meu nome eh Raphael Santos. 
+Eu tenho 25 anos e trabalho como detetive na cidade de Piratininga ha mais ou menos 4 meses. Nas ultimas semanas, eu e meu mentor, detetive Carlos Almeida, temos investigado casos de desaparecimentos suspeitos na cidade... e acho que ele acabou de se tornar uma das vitimas.
+    Ontem recebi uma mensagem de voz dele. Nunca o vira daquela maneira: confuso, ansioso, com medo. Ele disse coisas que nao sei se compreendo completamente, mas preciso tentar. Comecei essa serie de entradas para deixar minhas descobertas registradas e ver se consigo decifrar o que esta por tras de tudo isso.
+
+No momento, acho que tenho duas escolhas:
+"
+horizontal_alignment = 3
+script = ExtResource("3_4xfga")
+metadata/_edit_use_anchors_ = true
+
+[node name="MainText" type="RichTextLabel" parent="CanvasLayer/Control"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.0
+offset_right = 375.0
+offset_bottom = 601.0
+grow_horizontal = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gcbbq")
+theme_override_font_sizes/normal_font_size = 19
+script = ExtResource("3_4xfga")
+metadata/_edit_use_anchors_ = true
+
+[node name="Next" type="RichTextLabel" parent="CanvasLayer/Control"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -300.5
+offset_right = 375.0
+offset_bottom = 300.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gcbbq")
+theme_override_font_sizes/normal_font_size = 19
+script = ExtResource("3_4xfga")
+metadata/_edit_use_anchors_ = true
+
+[node name="Choices" type="RichTextLabel" parent="CanvasLayer/Control"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.0
+offset_right = 375.0
+offset_bottom = 601.0
+grow_horizontal = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gcbbq")
+theme_override_font_sizes/normal_font_size = 19
+script = ExtResource("3_4xfga")
+metadata/_edit_use_anchors_ = true
+
+[node name="Selector" type="RichTextLabel" parent="CanvasLayer/Control"]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -375.0
+offset_right = 375.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gcbbq")
+theme_override_font_sizes/normal_font_size = 19
+text = "  > "
+metadata/_edit_use_anchors_ = true
+
+[node name="Eye" type="Sprite2D" parent="CanvasLayer/Control"]
+visible = false
+z_index = -1
+position = Vector2(500, 380)
+scale = Vector2(3, 3)
+texture = ExtResource("4_meoe4")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Control"]
+autostart = true
+
+[node name="Shader" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Shader"]
+visible = false
+material = SubResource("ShaderMaterial_18hgq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Shader"]
+material = SubResource("ShaderMaterial_jr5mb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7rrbn")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pmph0")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_tupdg")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_nbtx1")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_bb54q")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_kbuuy")
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_saiw2")
+
+[node name="Window" type="Window" parent="."]
+process_mode = 3
+auto_translate_mode = 1
+position = Vector2i(484, 36)
+size = Vector2i(400, 500)
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Window"]
+
+[node name="Panel" type="Panel" parent="Window/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="Window/CanvasLayer"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 177.0
+offset_top = 17.0
+offset_right = -174.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="Window/CanvasLayer/Control"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_right = 180.0
+offset_bottom = 460.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_gcbbq")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a1vod")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7rrbn")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_meoe4")
+text = "abadswawd"
+script = ExtResource("13_7rrbn")
+
+[node name="Shader" type="CanvasLayer" parent="Window"]
+
+[node name="ColorRect" type="ColorRect" parent="Window/Shader"]
+material = SubResource("ShaderMaterial_pmph0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="timeout" from="CanvasLayer/Control/Timer" to="CanvasLayer/Control" method="_on_timer_timeout"]
+[connection signal="text_changed" from="Window/CanvasLayer/Control/TextEdit" to="CanvasLayer/Control" method="_on_text_edit_text_changed"]

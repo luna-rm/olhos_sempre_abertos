@@ -1,0 +1,57 @@
+H: "19/09/92 (15:34)"
+R: "Consegui identificar as coordenadas que consegui e cheguei a um lugar que só posso descrever como misterioso. É uma... caverna?"
+R: "Um arrepio percorre a minha espinha instantaneamente. Posso ouvir algo vindo de dentro. Sao sussurros..."
+R: "Sinto cada parte do meu corpo implorando para sair de lá."
+R: "Tenho que tomar uma decisao"
+*= Ir embora
+	-> cave1
+*= Entrar
+	-> cave2
+
+== cave1
+R: "Nao consigo continuar nesse lugar."
+R: "Algo aqui tá muito estranho."
+R: "Eu... eu sinto muito... "
+*= Continuar
+	-> e731
+
+== cave2
+eye: "1"
+R: "Dei um passo para dentro daquela escuridao. Me arrependo no segundo seguinte, mas decido nao deixar a covardia tomar conta de mim. Ouco os sussurros ficando mais altos. Um cheiro forte me deixa enjoado; sinto meu estômago revirar. Uma luz ao longe chama minha atencao. Ela crepita, entao assumo ser uma fogueira. Chego mais perto."
+R: "Quando meus olhos se acostumam com a luz, sinto meu corpo estremecer. Corpos ajoelhados em frente a uma parede sao a fonte daquele sussurro lento. Nao consigo identificá-los; tem algo cobrindo suas cabecas..."
+R: "Percebo que a parede está coberta de rabiscos. Sao... olhos? Olhos marcados em vermelho cobrindo praticamente toda sua superfície."
+D: "Dou um grito de forma inconsciente. Eles nao movem um músculo; nao parecem notar a minha presenca."
+*= Continuar
+	-> cave3
+
+== cave3
+eye: "2"
+R: "Nao sei ao certo o que fazer agora. Me sinto observado... Checo os corpos e eles permanecem na mesma posicao. Olho novamente para a parede e..."
+R: " "
+R: "..."
+R: " "
+R: "Eles..."
+R: "Os olhos..."
+R: "Os olhos estao olhando em minha direcao."
+D: "Meu instinto me implora para fugir. Corro em direcao a saída, mas ela nao está mais lá. Sinto que estou entrando cada vez mais fundo na caverna. Nao consigo parar de correr e me sinto cada vez mais vigiado. Os desenhos vao ficando maiores e de um vermelho mais intenso."
+D: "Uma porta. Eh tudo que consigo enxergar nesse momento. Qualquer resquício de claridade foi engolido pela escuridao."
+D: "Nao tenho escolha. Nao tenho saída."
+*= Entrar
+	-> e008
+	
+== e008
+F: "008"
+R: "Jornal Diário"
+R: " "
+R: "22/09/92"
+R: "Mais um na lista de desaparecidos. Raphael Santos, 25 anos, foi oficialmente declarado como desaparecido."
+R: "O jovem, que trabalhava como investigador, foi visto por último saindo de sua residência no dia 19/09. Câmeras de seguranca indicam que ele foi para o leste. Seu carro foi encontrado abandonado em um terreno baldio no interior da cidade."
+R: "Nao se tem mais notícias do paradeiro do jovem."
+E: " "
+
+== e731
+F: "731"
+R: "Você foge. Por algum motivo, os sussurros que você ouviu naquele lugar te assombram sempre que você fecha os olhos. Você nao consegue falar sobre aquilo com ninguém e se isola em sua casa. Os dias passam e você nao para de pensar se fez a escolha certa ao fugir..."
+D: "O detetive continua desaparecido."
+E: " "
+
